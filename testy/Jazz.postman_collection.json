@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "1ca2f425-5467-44f0-99d6-924d31d8f278",
+		"name": "Jazz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "425c4a68-9f79-4479-a965-d7fd2af65f21",
+			"name": "http://api.postcodes.io/postcodes/OX495NU",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "292bb906-6836-4c80-9261-fb913b3dc39d",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"South Central\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.postcodes.io/postcodes/OX495NU",
+					"protocol": "http",
+					"host": [
+						"api",
+						"postcodes",
+						"io"
+					],
+					"path": [
+						"postcodes",
+						"OX495NU"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

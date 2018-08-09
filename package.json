@@ -1,0 +1,14 @@
+{
+  "name": "testyapi",
+  "version": "1.0.0",
+  "description": "Project for storing Postman tests",
+  "main": "index.js",
+  "scripts": {
+    "api-tests-production": "newman run testy/Jazz.postman_collection.json"
+  },
+  "author": "Metajas",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^4.0.1"
+  }
+}
